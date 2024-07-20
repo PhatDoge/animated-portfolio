@@ -1,0 +1,64 @@
+html {
+  //y mandatory?
+  scroll-snap-type: y;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 110vh;
+  width: 100%;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+/* Mixin for small devices (phones) */
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+/* Mixin for medium devices (tablets) */
+@mixin tablet {
+  @media (min-width: 600px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+/* Mixin for large devices (desktops) */
+@mixin desktop {
+  @media (min-width: 768px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+/* Mixin for extra large devices (large desktops) */
+@mixin large-desktop {
+  @media (min-width: 992px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+/* Mixin for extra extra large devices (very large desktops) */
+@mixin extra-large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
